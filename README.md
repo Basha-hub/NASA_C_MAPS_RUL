@@ -34,3 +34,6 @@ The project moves beyond traditional regression by implementing and comparing tw
 ### Dependencies
 ```bash
 pip install torch pandas numpy scikit-learn scipy PyWavelets matplotlib seaborn
+
+#For Project content first 4 files follow the below link and download the dataset from kaggle.
+http://kaggle.com/datasets/bishals098/nasa-turbofan-engine-degradation-simulation
