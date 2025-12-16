@@ -1,5 +1,11 @@
 # PREDICTIVE MAINTENANCE: RUL ESTIMATION USING HYBRID DEEP LEARNING (CNN-LSTM)
 
+![Project Type](https://img.shields.io/badge/Project_Type-Academic%20%7C%20Data%20Science-blue)
+![Status](https://img.shields.io/badge/Status-Completed-success)
+![Language](https://img.shields.io/badge/Language-Python-3776AB)
+![Framework](https://img.shields.io/badge/Framework-PyTorch-EE4C2C)
+![Modeling](https://img.shields.io/badge/Modeling-Hybrid%20CNN--LSTM-brightgreen)
+
 ## Overview
 This academic data science project focuses on **Predictive Maintenance (PdM)**, specifically estimating the **Remaining Useful Life (RUL)** of turbofan jet engines using the **NASA C-MAPS** dataset.
 
@@ -37,3 +43,40 @@ pip install torch pandas numpy scikit-learn scipy PyWavelets matplotlib seaborn
 
 #For Project content first 4 files follow the below link and download the dataset from kaggle.
 http://kaggle.com/datasets/bishals098/nasa-turbofan-engine-degradation-simulation
+```
+
+###Running the Analysis
+Clone the repository.
+
+Open NASA_C_MAPS_RUL.ipynb.
+
+Run the preprocessing cells to generate the Frequency Domain features.
+
+Execute the training loop for the MLP to establish a baseline (Expected RMSE: ~25).
+
+Execute the training loop for the Hybrid Model to see the performance boost (Expected RMSE: ~15).
+
+Modeling Approach
+The project compares two PyTorch-based architectures:
+
+Baseline: Multi-Layer Perceptron (MLP)
+
+A standard feed-forward neural network using fully connected layers.
+
+Limitation: Treats time-series data as static instances, losing sequential context.
+
+Proposed: Hybrid CNN-LSTM
+
+CNN Layers: Apply 1D convolutions to extract local features from sensor windows.
+
+LSTM Layers: Process the sequence of extracted features to learn long-term degradation trends.
+
+Output: A regression head predicting the exact RUL.
+
+📧 Contact
+Vigneshwar Lokoji
+
+Feel free to connect or ask questions about the project or code.
+
+
+
