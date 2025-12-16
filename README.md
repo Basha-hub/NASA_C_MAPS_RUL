@@ -45,38 +45,5 @@ pip install torch pandas numpy scikit-learn scipy PyWavelets matplotlib seaborn
 http://kaggle.com/datasets/bishals098/nasa-turbofan-engine-degradation-simulation
 ```
 
-###Running the Analysis
-Clone the repository.
-
-Open NASA_C_MAPS_RUL.ipynb.
-
-Run the preprocessing cells to generate the Frequency Domain features.
-
-Execute the training loop for the MLP to establish a baseline (Expected RMSE: ~25).
-
-Execute the training loop for the Hybrid Model to see the performance boost (Expected RMSE: ~15).
-
-Modeling Approach
-The project compares two PyTorch-based architectures:
-
-Baseline: Multi-Layer Perceptron (MLP)
-
-A standard feed-forward neural network using fully connected layers.
-
-Limitation: Treats time-series data as static instances, losing sequential context.
-
-Proposed: Hybrid CNN-LSTM
-
-CNN Layers: Apply 1D convolutions to extract local features from sensor windows.
-
-LSTM Layers: Process the sequence of extracted features to learn long-term degradation trends.
-
-Output: A regression head predicting the exact RUL.
-
-📧 Contact
-Vigneshwar Lokoji
-
-Feel free to connect or ask questions about the project or code.
-
 
 
